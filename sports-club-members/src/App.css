@@ -1,0 +1,728 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+}
+
+#ghost-div {
+  display: none;
+}
+
+.layout nav {
+  display: inline-flex;
+  width: 100%;
+  height: 10vh;
+  background-color: #3B95D7;
+}
+.layout aside {
+  width: 30%;
+  height: 100vh;
+  overflow: scroll;
+  background: rgba(59, 149, 215, 0.15);
+  padding: 10px;
+}
+.layout main {
+  width: 70%;
+  height: 100vh;
+}
+.layout .main-body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
+.navbar-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  align-self: center;
+  font-size: 45px;
+  letter-spacing: 0.1em;
+  margin-left: 80px;
+  color: #FFFFFF;
+}
+
+#footer-1024, #edit-footer-1024 {
+  display: none;
+}
+
+/*------------CARDS-------------*/
+#aside-bar .member-card {
+  margin-bottom: 20px;
+}
+
+#add-member-container-top {
+  display: flex;
+  justify-content: space-between;
+}
+#add-member-container-top #add-title {
+  width: 35%;
+}
+
+#user-saved-toast,
+#error-toast {
+  width: 65%;
+  background: #48b791;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#error-mark {
+  font-family: monospace;
+  color: #DD482D;
+  font-size: 20px;
+}
+
+#error-title, #saved-text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+#save-check-circle,
+#error-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  margin-right: 8px;
+  margin-left: 5px;
+}
+
+#save-tick-mark {
+  transform: rotate(40deg);
+  height: 15px;
+  width: 10px;
+  border-bottom: 4px solid #48B791;
+  border-right: 4px solid #48B791;
+}
+
+#member-card-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 65%;
+}
+
+#member-card-bot {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 30%;
+}
+
+.edit-button,
+.delete-button {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  width: 22%;
+  height: 70%;
+  margin-right: 20px;
+  background: #D9D9D9;
+  border: 1px solid #767373;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+  letter-spacing: 0.1em;
+}
+
+.delete-button {
+  color: #FFFFFF;
+  background: #DD5A5A;
+}
+
+.profile-picture,
+.card-info {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  height: 67px;
+  min-width: 67px;
+  background-color: #BBB;
+  border-radius: 40px;
+}
+
+.profile-picture-text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  align-self: center;
+  font-size: 36px;
+}
+
+#card-info-name {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000000;
+}
+
+.card-info-id,
+.card-info-email {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.member-card {
+  height: 15%;
+  width: 90%;
+  margin: 0 auto;
+  background: rgba(86, 92, 78, 0.1);
+  border: 0.5px solid #565C4E;
+  border-radius: 10px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+#add-member-container {
+  width: 100%;
+  height: 45%;
+  background: #D9D9D9;
+  margin: 5px;
+}
+
+#add-member-container-content {
+  width: 100%;
+  height: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+#add-title,
+#edit-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: #3B95D7;
+}
+
+.first-name,
+.last-name,
+.address,
+.zip-code,
+.city,
+.country,
+.gender,
+.age,
+.activity-class {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #666363;
+}
+
+.first-row,
+.second-row,
+.third-row,
+.fourth-row {
+  display: flex;
+  margin-top: 15px;
+}
+
+.first-row div,
+.second-row div,
+.third-row div {
+  margin-right: 20px;
+}
+
+.first-name-wrapper input,
+.last-name-wrapper input,
+.address-wrapper input,
+.zip-code-wrapper input,
+.city-wrapper input,
+.country-wrapper input,
+.gender-wrapper select,
+.age-wrapper input,
+.activity-class-wrapper input {
+  border: 0;
+  height: 32px;
+}
+
+.activity-class-wrapper .activity-class-buttons {
+  height: 32px;
+  background-color: #FFFFFF;
+}
+
+.activity-class-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity-class-buttons input {
+  width: 8px;
+  height: 8px;
+  background: #3B95D7;
+}
+
+.activity-class-professional,
+.activity-class-amateur {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #3B95D7;
+}
+
+.activity-class-professional {
+  padding-left: 20px;
+}
+
+.activity-class-amateur {
+  padding-right: 20px;
+}
+
+.first-name-wrapper, .last-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.address-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+}
+
+.city-wrapper, .country-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+.zip-code-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 12%;
+}
+
+.gender-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+}
+
+.age-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 9%;
+}
+
+.activity-class-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 25%;
+}
+
+.practiced-sports-wrapper {
+  width: 60%;
+  height: 110px;
+  border: 1px solid #3B95D7;
+  border-radius: 15px;
+}
+
+.practiced-sports {
+  width: 100%;
+  padding: 5px 10px;
+}
+.practiced-sports input {
+  width: 9px;
+  height: 9px;
+  background: #D9D9D9;
+  border: 1px solid #3B95D7;
+}
+.practiced-sports div:first-child {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #666363;
+}
+
+.sports {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  padding-top: 3px;
+}
+.sports div {
+  margin-right: 20px;
+}
+
+.add-sport,
+.edit-sport {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #3B95D7;
+}
+
+.save-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  width: 40%;
+}
+
+.save-button,
+.back-button {
+  min-width: 158px;
+  height: 30px;
+  background: #3B95D7;
+  border: 1px solid #686868;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+}
+
+.delete-modal {
+  display: none;
+}
+
+#delete-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#delete-modal-box {
+  width: 442px;
+  height: 229px;
+  background: #D9D9D9;
+  border: 1px solid #3B95D7;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+#modal-header {
+  width: 100%;
+  height: 20%;
+  background: #3B95D7;
+  display: flex;
+  justify-content: start;
+  padding-top: 5px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+#modal-header-text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+#modal-content {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  width: 100%;
+  height: 60%;
+  background: #D9D9D9;
+  font-size: 20px;
+  padding: 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#modal-footer {
+  width: 100%;
+  height: 20%;
+  background: #D9D9D9;
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+#modal-footer button {
+  height: 30px;
+  width: 117px;
+  border: 1px solid #686868;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right: 15px;
+}
+
+#modal-yes-button {
+  background: #3B95D7;
+}
+
+#modal-no-button {
+  background: #DD482D;
+}
+
+hr {
+  border: 1px solid #000000;
+}
+
+#edit-member-container {
+  width: 97%;
+  height: 45%;
+  background: #D9D9D9;
+}
+
+#edit-member-container-top, #error-toast-mark {
+  display: flex;
+}
+
+#edit-title {
+  width: 35%;
+}
+
+#error-toast {
+  width: 65%;
+  background: #DD482D;
+}
+
+footer {
+  width: 100%;
+  height: 135px;
+  background: #3B95D7;
+  display: flex;
+  align-items: flex-end;
+}
+
+#footer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+li {
+  float: left;
+}
+
+@media only screen and (max-width: 1024px) {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  button {
+    padding: 0;
+    margin: 0;
+  }
+  #ghost-div {
+    display: none;
+  }
+  .layout nav {
+    width: 100%;
+    height: 10%;
+    background-color: #3B95D7;
+  }
+  .layout main {
+    width: 60%;
+    height: 100%;
+  }
+  .layout aside {
+    width: 40%;
+  }
+  #add-member-container-1024, #edit-member-container-1024 {
+    width: 97%;
+    height: 100%;
+    display: block;
+    background: #D9D9D9;
+  }
+  #add-member-container-top {
+    width: 100%;
+    display: flex;
+  }
+  #add-title {
+    width: 100%;
+  }
+  #first-row-1024 {
+    display: flex;
+    margin-top: 10px;
+  }
+  #second-row-1024 {
+    width: 100%;
+  }
+  #third-row-1024 {
+    display: flex;
+  }
+  #fourth-row-1024 {
+    display: flex;
+  }
+  #first-row-1024,
+#second-row-1024,
+#third-row-1024,
+#fourth-row-1024,
+#fifth-row-1024,
+#sixth-row-1024,
+#seventh-row-1024,
+#eight-row-1024 {
+    display: flex;
+    margin-top: 15px;
+  }
+  .first-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 47%;
+    min-width: 25%;
+    margin-right: 10px;
+  }
+  .last-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 47%;
+    min-width: 25%;
+  }
+  .address-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 100%;
+  }
+  .zip-code-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 25%;
+  }
+  .city-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    max-width: 70%;
+    margin-right: 15px;
+  }
+  .country-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    max-width: 40%;
+    margin-right: 10px;
+  }
+  .age-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 20%;
+  }
+  .gender-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    max-width: 40%;
+  }
+  #back-button {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  #footer-1024 {
+    display: block;
+  }
+  #footer-first-column {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+    padding-left: 15px;
+  }
+  #footer-second-column {
+    display: flex;
+    flex-direction: column;
+  }
+  #footer-recent-news, #footer-services {
+    padding-bottom: 20px;
+  }
+  #footer-info {
+    color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+  }
+  ul {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+  }
+  li {
+    float: left;
+  }
+  #back-button {
+    display: block;
+  }
+  #back-button-1024 {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
